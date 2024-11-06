@@ -2,7 +2,7 @@ package example;
 
 public class File implements FileSystemElement {
     private String name;
-    private int size; // Size in megabytes
+    private int size;
 
     public File(String name, int size) {
         this.name = name;
