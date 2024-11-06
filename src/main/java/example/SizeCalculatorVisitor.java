@@ -7,7 +7,12 @@ public class SizeCalculatorVisitor implements FileSystemVisitor {
     public void visit(File file) {
         totalSize += file.getSize();
     }
-
+    @Override
+    public void visit(Directory directory) {
+        for (FileSystemElement element : directory.getElements()) {
+            System.out.println(element);
+        }
+    }
 
     public int getTotalSize() {
         return totalSize;
